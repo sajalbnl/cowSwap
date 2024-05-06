@@ -1,26 +1,17 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "affected": {
-    "defaultBase": "develop"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "M2U1ZmI5MTEtZmY3MS00YzRjLTkxYmQtZDhkM2QzZTBkNTVhfHJlYWQ="
-      }
-    }
-  },
   "targetDefaults": {
     "build": {
-      "inputs": ["default", "production", "^production"]
+      "inputs": ["default", "production", "^production"],
+      "cache": true
     },
     "e2e": {
-      "inputs": ["default", "^production"]
+      "inputs": ["default", "^production"],
+      "cache": true
     },
     "test": {
-      "inputs": ["default", "^production"]
+      "inputs": ["default", "^production"],
+      "cache": true
     },
     "lint": {
       "inputs": [
@@ -28,7 +19,8 @@
         "{workspaceRoot}/.eslintrc.json",
         "{workspaceRoot}/.eslintignore",
         "{workspaceRoot}/eslint.config.js"
-      ]
+      ],
+      "cache": true
     }
   },
   "namedInputs": {
@@ -83,5 +75,7 @@
         "extensions": ["ts", "tsx", "js", "jsx", "html", "vue"]
       }
     }
-  ]
+  ],
+  "nxCloudAccessToken": "M2U1ZmI5MTEtZmY3MS00YzRjLTkxYmQtZDhkM2QzZTBkNTVhfHJlYWQ=",
+  "defaultBase": "develop"
 }

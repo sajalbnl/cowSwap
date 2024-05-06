@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/cowswap-frontend/src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
@@ -73,7 +74,6 @@
         "buildTarget": "cowswap-frontend:build"
       }
     },
-
     "i18n": {
       "executor": "nx:run-commands",
       "dependsOn": ["i18n:extract"],
@@ -91,6 +91,5 @@
       "inputs": ["{workspaceRoot}/apps/**/*.{ts,tsx,jsx}", "{workspaceRoot}/libs/**/*.{ts,tsx,jsx}"],
       "outputs": ["{projectRoot}/src/locales/*.po"]
     }
-  },
-  "tags": []
+  }
 }

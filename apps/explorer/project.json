@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/explorer/src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
@@ -72,6 +73,5 @@
         "buildTarget": "explorer:build"
       }
     }
-  },
-  "tags": []
+  }
 }

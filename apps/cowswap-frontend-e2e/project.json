@@ -3,6 +3,8 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/cowswap-frontend-e2e/src",
   "projectType": "application",
+  "tags": [],
+  "implicitDependencies": ["cowswap-frontend"],
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
@@ -18,7 +20,5 @@
         "lintFilePatterns": ["apps/cowswap-frontend-e2e/**/*.{js,ts}"]
       }
     }
-  },
-  "tags": [],
-  "implicitDependencies": ["cowswap-frontend"]
+  }
 }
